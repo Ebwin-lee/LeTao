@@ -1,0 +1,165 @@
+/* 首页样式 */
+
+/* 九宫格模块 */
+
+.lt-nine-box {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.lt-nine-box a {
+  float: left;
+  display: block;
+  width: 33.3333%;
+}
+
+.lt-nine-box img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* 售卖模块 */
+
+.lt-sale {
+  width: 100%;
+  padding: 0 10px;
+  border-top: 1px solid #ccc;
+}
+
+.lt-sale ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lt-sale li {
+  float: left;
+  width: 67.1%;
+  font-size: 0;
+}
+
+.lt-sale a {
+  display: inline-block;
+  width: 50%;
+}
+
+.lt-sale img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.lt-sale li:nth-child(2) {
+  float: right;
+  width: 32.9%;
+}
+
+.lt-sale li:nth-child(2) a {
+  width: 100%;
+}
+
+/* 品牌区域 */
+
+.lt-brand {
+  width: 100%;
+  padding: 10px 10px 0px;
+}
+
+.lt-brand-title {
+  width: 100%;
+}
+
+.lt-brand-title img {
+  width: 100%;
+}
+
+.lt-brand-content {
+  width: 100%;
+  font-size: 0px;
+}
+
+.lt-brand-content a {
+  /* 移动端尽量少用 float: left ,会影响页面渲染 */
+  display: inline-block;
+  width: 25%;
+}
+
+.lt-brand-content img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* 运动生活区域 */
+
+.lt-sports {
+  width: 100%;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+.lt-sports-title img {
+  width: 100%;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+.lt-sports-content {
+  width: 100%;
+}
+
+.lt-sports-content ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lt-sports-content li {
+  float: left;
+  width: 50%;
+  padding: 0 4px;
+  margin-bottom: 15px;
+}
+
+.lt-item {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.lt-item img {
+  width: 100%;
+}
+
+.lt-item p {
+  height: 36px;
+  line-height: 18px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.lt-item .price {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.lt-item .price span:first-child {
+  margin-right: 10px;
+  color: rgb(243, 32, 32);
+}
+
+.lt-item .price span:last-child {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.lt-item a {
+  padding: 5px 8px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: #006699;
+}
