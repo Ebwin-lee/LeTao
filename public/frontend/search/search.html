@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>乐淘云购-搜索中心</title>
+    <!-- 导入页面初始化文件 -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- 页面字体图标文件 -->
+    <link rel="stylesheet" href="../res/fontAwesome/css/font-awesome.min.css" />
+    <!-- mui UI插件 -->
+    <link rel="stylesheet" href="../res/mui/css/mui.min.css" />
+    <!-- 导入公共样式 -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <!-- 当前页面样式 -->
+    <link rel="stylesheet" href="../css/search.css" />
+    <!-- 网站图标 -->
+    <link type="image/x-icon" rel="shortcut icon" href="../images/favicon.ico">
+</head>
+
+<body>
+    <!-- 头部模块 -->
+    <header class="lt-header mui-bar mui-bar-nav">
+        <a href="javascript:history.back();" class="fa fa-arrow-left lt-header-back mui-pull-left"></a>
+        <a href="./search.html" class="fa fa-search mui-pull-right mui-plus-visible"></a>
+        <h1 class="mui-title lt-header-title">搜索中心</h1>
+    </header>
+    <!-- 底部导航栏 -->
+    <nav class="lt-footer mui-bar mui-bar-tab">
+        <a href="../index.html" class="mui-item">
+            <span class="fa fa-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-item" href="../sort.html">
+            <span class="fa fa-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-item " href="../cart.html">
+            <span class="fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-item" href="../profile.html">
+            <span class="fa fa-user"></span>
+            <span class="mui-tab-label">个人中心</span>
+        </a>
+    </nav>
+    <!-- 主体滚动部分 -->
+    <main class="mui-content">
+        <!-- 输入文本框 -->
+        <div class="search-box">
+            <input type="text" name="" id="">
+            <a href="javascript:;" class="search-btn">搜索</a>
+        </div>
+        <!-- 历史记录 -->
+        <div class="history">
+            <div class="history-title">
+                <div class="history-title-manager">
+                    <span>搜索历史</span>
+                    <span><i class="fa fa-trash-o"></i>清空历史</span>
+                </div>
+            </div>
+            <ul class="history-list">
+                <li>
+                    <span>nike</span>
+                    <i>&times;</i>
+                </li>
+                <li>
+                    <span>adidas</span>
+                    <i>&times;</i>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!-- 历史记录模板 -->
+    <script type="text/template" id="history-template">
+        <div class="history-title">
+            <%if(arr.length != 0){%>
+                <div class="history-title-manager">
+                    <span>搜索历史</span>
+                    <span>
+                        <i class="fa fa-trash-o"></i>
+                        清空历史
+                    </span>
+                </div>
+                <p>没有历史搜索记录</p>
+            <%}%>
+        </div>
+        <%if(arr.length != 0){%>
+            <ul class="history-list">
+                <%for(var i = 0; i<arr.length; i++){%>
+                    <li>
+                        <span>
+                            <%=arr[i]%>
+                        </span>
+                        <i>&times;</i>
+                    </li>
+                <%}%>
+            </ul>
+        <%}%>
+    </script>
+    <script src="../res/mui/js/mui.min.js"></script>
+    <script src="../res/zepto/zepto.min.js"></script>
+    <script src="../res/artTemplate/template-native.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>
