@@ -60,7 +60,7 @@
             <div class="history-title">
                 <div class="history-title-manager">
                     <span>搜索历史</span>
-                    <span><i class="fa fa-trash-o"></i>清空历史</span>
+                    <span><i class="fa fa-trash-o clear"></i>清空历史</span>
                 </div>
             </div>
             <ul class="history-list">
@@ -82,21 +82,20 @@
                 <div class="history-title-manager">
                     <span>搜索历史</span>
                     <span>
-                        <i class="fa fa-trash-o"></i>
+                        <i class="fa fa-trash-o clear"></i>
                         清空历史
                     </span>
                 </div>
-                <p>没有历史搜索记录</p>
+                <%}else{%>
+              <p>没有历史搜索记录</p>
             <%}%>
         </div>
-        <%if(arr.length != 0){%>
+        <%if(arr.length !=0) {%>
             <ul class="history-list">
-                <%for(var i = 0; i<arr.length; i++){%>
-                    <li>
-                        <span>
-                            <%=arr[i]%>
-                        </span>
-                        <i>&times;</i>
+                <%for(var i = 0;i<arr.length; i++){%>
+                  <li>
+                      <span><%=arr[i]%></span>
+                      <i>&times;</i>
                     </li>
                 <%}%>
             </ul>

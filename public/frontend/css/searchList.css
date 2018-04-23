@@ -1,0 +1,114 @@
+/* 搜素结果页面样式 */
+
+.sort-search {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.sort {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+}
+
+.sort ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sort li {
+  float: left;
+  width: 25%;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.sort li.active a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: red;
+}
+
+.sort a {
+  color: #666;
+}
+
+.lt-sports {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.lt-sports-title img {
+  width: 100%;
+}
+
+.lt-sports-content {
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.lt-sports-content .item-wrap {
+  float: left;
+  width: 50%;
+  padding: 0 4px;
+  margin-bottom: 10px;
+}
+
+.lt-sports-content .item {
+  display: block;
+  /* padding: 10px; */
+  background-color: #fff;
+  /* box-shadow:  0px 0px 2px rgba(0,0,0,0.5); */
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.lt-sports-content .item img {
+  width: 100%;
+}
+
+.lt-sports-content .item span {
+  /* display: block; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: left;
+  color: #666;
+}
+
+.lt-sports-content .item b {
+  font-weight: normal;
+  font-size: 12px;
+  margin: 0 5px;
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.lt-sports-content .item b:nth-child(3) {
+  color: rgb(231, 49, 49);
+  text-decoration: none;
+}
+
+.lt-sports-content .item button {
+  display: block;
+  margin: 10px auto;
+  background: #006699;
+  color: #fff;
+  width: 82px;
+  height: 34px;
+}
