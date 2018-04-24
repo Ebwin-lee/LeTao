@@ -2,7 +2,7 @@
  * @Author: Lee.mark 
  * @Date: 2018-04-23 16:21:25 
  * @Last Modified by: Lee.mark
- * @Last Modified time: 2018-04-23 16:29:21
+ * @Last Modified time: 2018-04-24 16:46:37
  * 商品想起页js
  */
 
@@ -46,6 +46,10 @@ $(function () {
 });
 
 // 获取商品详情数据
+/**
+ * 
+ * @param {*} productId 商品ID
+ */
 function getProductData(productId) {
   $.ajax({
     type: 'GET',

@@ -1,8 +1,8 @@
 /*
  * @Author: Lee.mark 
  * @Date: 2018-04-23 16:10:13 
- * @Last Modified by:   Lee.mark 
- * @Last Modified time: 2018-04-23 16:10:13 
+ * @Last Modified by: Lee.mark
+ * @Last Modified time: 2018-04-24 19:30:44
  */
 
 $(function (param) {
@@ -64,7 +64,6 @@ $(function (param) {
       // 改样式
       $(this).find('i').removeClass('fa-angle-up');
       $(this).find('i').addClass('fa-angle-down');
-      // 
     } else {
       // 如果是升序 就调用升序排列方法
       getSearchResult(1, null, null, 1);
@@ -73,6 +72,17 @@ $(function (param) {
       $(this).find('i').addClass('fa-angle-up');
     }
   });
+
+  /** 获取搜索按钮,绑定触摸事件 **/ 
+  $(".search-btn").on('tap', function () {
+    // 获取输入框中的值
+    var searchMsg = $('.search-box input').val();
+    if (!searchMsg.trim()) {
+      mui.alert("请输入关键字");
+    } else {
+      getProductList(1, searchMsg);
+    }
+  })
 
   // 插件函数,上拉刷新,下拉加载
   mui.init({
@@ -117,9 +127,8 @@ $(function (param) {
 });
 
 /**
- * 
  * @param {*} pageNum 代表第几页
- * @param {*} proName 搜索的关键字 就把数据库中的所有的商品请求来 如果有 就把符合关键字要求的请求过来
+ * @param {*} proName 搜索的关键字 
  * @param {*} price  按照价格排序  1升序 2降序
  * @param {*} num    按照库存 1升序 2降序
  */
@@ -132,11 +141,8 @@ function getSearchResult(pageNum, proName, price, num) {
       page: pageNum || 1,
       pageSize: 10,
       proName: proName || '',
-      // 如果不写null 你写什么都会对其他排序有影响
-      // null这个事情不知道  1升序 2降序  传什么参数 全看后台接口 如果有疑惑 去问后台的代码
-      price: price || null,
-      // 按照库存
-      num: num || null
+      price: price || null,  // 价格
+      num: num || null  // 库存
     },
     success: function (result) {
       // 渲染页面
@@ -145,5 +151,5 @@ function getSearchResult(pageNum, proName, price, num) {
       // 把数据写到页面上
       $(".lt-sports-content").html(productResult);
     },
-  })
+  });
 }
