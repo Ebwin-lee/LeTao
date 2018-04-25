@@ -2,7 +2,7 @@
  * @Author: Lee.mark 
  * @Date: 2018-04-24 17:16:46 
  * @Last Modified by: Lee.mark
- * @Last Modified time: 2018-04-24 17:41:21
+ * @Last Modified time: 2018-04-25 18:45:14
  */
 
 $(function () {
@@ -37,14 +37,14 @@ $(function () {
         if (result.success == true) {
           // 回跳到上一页 获取地址栏中的returnUrl
           var url = new URLSearchParams(location.search);
-          // console.log(location.search);
           var returnURL = url.get('returnUrl');
-          // 判断跳转得路径,有值就跳到相应页面,没有就跳转到首页
+          // 判断跳转得路径
           if (!returnURL) {
-            location.href = "../index.html";
+            // 没有值就跳转到个人页面
+            location.href = "../profile.html";
           } else {
-            // console.log(returnURL);
-            location.href = returnURL;  //跳转
+            // 有值就跳到相应页面
+            location.href = returnURL; 
           }
         }
       },

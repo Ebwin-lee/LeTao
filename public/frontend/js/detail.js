@@ -2,7 +2,7 @@
  * @Author: Lee.mark 
  * @Date: 2018-04-23 16:21:25 
  * @Last Modified by: Lee.mark
- * @Last Modified time: 2018-04-24 16:46:37
+ * @Last Modified time: 2018-04-25 15:16:23
  * 商品想起页js
  */
 
@@ -117,6 +117,18 @@ function addCart(productId, num, size) {
         // 登陆之后 把存起来的参数拿出来作为local.href的地址
         var url = location.href;
         location.href = '../user/login.html?returnUrl=' + url;
+      }
+      // 判断是否跳转到购物车页面
+      if (result.success == true) {
+        mui.confirm('是否要去购物车页面', '提示', ['确定', '取消'], function (param) {
+          // 判断点击的是确定还是取消
+          if (param.index == 0) {
+            // 确定
+            location.href = '../cart.html';
+          } else {
+            // 取消,留在当前页
+          }
+        });
       }
     }
   });

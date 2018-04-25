@@ -21,8 +21,7 @@ $(function (param) {
         var firstResult = template('first-template', result);
         // 将数据渲染到页面的ul中
         $('.first-category').html(firstResult);
-        // 默认选中第一项
-        getFirstCategory(result.rows[0].id);
+        getSecondCategory(result.rows[0].id); 
       },
       complete: function (param) {
         // 隐藏图片
@@ -53,9 +52,9 @@ $(function (param) {
   getFirstCategory();
 
   // 点击一级菜单,联动二级菜单
-  $('first-category').on('tap', 'a', function (param) {
+  $('.first-category').on('tap', 'a', function (param) {
     // 删除带有的active的类名
-    $('first-category li').removeClass('active');
+    $('.first-category li').removeClass('active');
     // 给当前li添加active类
     $(this).parents('li').addClass('active');
     // 获取自定义的属性值 data-id

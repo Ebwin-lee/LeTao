@@ -2,7 +2,7 @@
  * @Author: Lee.mark 
  * @Date: 2018-04-23 16:10:13 
  * @Last Modified by: Lee.mark
- * @Last Modified time: 2018-04-24 19:30:44
+ * @Last Modified time: 2018-04-25 09:18:31
  */
 
 $(function (param) {
@@ -80,7 +80,7 @@ $(function (param) {
     if (!searchMsg.trim()) {
       mui.alert("请输入关键字");
     } else {
-      getProductList(1, searchMsg);
+      getSearchResult(1, searchMsg);
     }
   })
 
